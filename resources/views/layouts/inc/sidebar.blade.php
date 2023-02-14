@@ -1,10 +1,5 @@
 <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
-    <!--
-      Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
-
-      Tip 2: you can also add an image using data-image tag
-    -->
-    <div class="logo"><a href="http://127.0.0.1:8000/" class="simple-text">
+    <div class="logo"><a href="{{ url('/') }}" class="simple-text">
             HOME
         </a></div>
     <div class="sidebar-wrapper">

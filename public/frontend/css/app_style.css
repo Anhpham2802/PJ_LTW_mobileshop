@@ -23,12 +23,12 @@ nav.navbar {
     font-weight: bold;
     text-decoration: none;
     font-size: 30px;
-    color: #ea5b0d;
+    color: #FFF7E9;
     line-height: 50px;
 }
 
 a.navbar-brand:hover {
-    color: #d18f15;
+    color: #cebb98;
 }
 
 .navbar-toggler {
@@ -49,7 +49,7 @@ a.navbar-brand:hover {
 
 .nav-link {
 
-    color: #05c056;
+    color: #FFF7E9;
     text-decoration: none;
     font-weight: bold;
     font-size: 20px;
@@ -57,7 +57,7 @@ a.navbar-brand:hover {
 }
 
 a.nav-link:hover {
-    color: #90d390;
+    color: #cebb98;
 }
 
 .dropdown-menu {

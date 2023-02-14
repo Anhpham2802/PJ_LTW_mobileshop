@@ -26,14 +26,14 @@ My Cart
             @foreach ($cartitems as $item)
             <div class="product_data_cart product_data">
                 <div><img src="{{ asset('assets/uploads/products/' .$item->products->image) }}" height="70px" width="70px" alt="Image here"></div>
-                <div>
+                <div style="width: 20%">
                     <h6>{{ $item->products->name }}</h6>
                 </div>
-                <div>
+                <div style="width: 20%">
                     <h6> Rs {{ $item->products->selling_price }}</h6>
                 </div>
 
-                <div>
+                <div style="margin: 12px;">
                     <input type="hidden" class="prod_id" value="{{ $item->prod_id }}">
                     @if($item->products->qty >= $item->prod_qty)
                     <label for="Quantity">Quantity</label>

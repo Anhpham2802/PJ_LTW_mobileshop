@@ -1,6 +1,5 @@
 .top{
     margin-top: 100px;
-  
   }
 
   .rating-modal{
@@ -52,7 +51,7 @@
     color: rgb(112, 111, 111);
   }
   .add-to-cart{
-    width: 150px;
+    width: 160px;
     font-size: 18px;
     padding: 10px;
     background-color: rgb(243, 85, 11);
@@ -81,7 +80,7 @@
     margin-top: 30px;
     justify-content: space-between;
   }
-  .rade-this-product{
+  .rate-this-product{
    background-color: rgb(27, 2, 251);
    border-radius: 5px;
    text-align: center;

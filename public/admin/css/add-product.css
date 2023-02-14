@@ -6,3 +6,21 @@
     width: 50px;
     margin: 30px auto 30px;
 }
+
+input.form-control {
+    width: 70%;
+    border: 1px solid #bf4343;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+textarea.form-control {
+    width: 70%;
+    border: 1px solid #bf4343;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+.product-card-header h4 {
+    font-size: 30px;
+}

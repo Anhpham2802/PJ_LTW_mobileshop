@@ -1,4 +1,3 @@
-
 @extends('layouts.front')
 
 @section('title')
@@ -20,16 +19,16 @@
                 <div class="products">
                     @foreach ($featured_products as $prod)
                         <div class="item">
-                            <a href="{{ url('view-category/'.$prod->category->slug.'/'.$prod->slug)}}">
-                                <div >
-                                    <img src="{{ asset('assets/uploads/products/'.$prod->image)}}"  alt="Product image">
-                                    <div>
-                                        <h5 style="display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;">{{$prod->name}}</h5>
-                                        <small class="float-start"><s>{{$prod->original_price}}₫</s></small>
-                                        <h5 class="float-end">{{$prod->selling_price}}₫</h5>
-                                    </div>
+                            <div style="box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);">
+                                <div style="padding: 20px; overflow:hidden;">
+                                    <a href="{{ url('view-category/'.$prod->category->slug.'/'.$prod->slug)}}">
+                                            <img src="{{ asset('assets/uploads/products/'.$prod->image)}}"  alt="Product image">
+                                            <h5 style="display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;padding-top: 10px;">{{$prod->name}}</h5>
+                                            <small class="float-start"><s>{{$prod->original_price}}</s></small>
+                                            <h5 class="float-end">{{ $prod->selling_price }}</h5>
+                                    </a>
                                 </div>
-                            </a>
+                            </div>
                         </div>
                     @endforeach
                 </div>
@@ -50,8 +49,8 @@
                     @foreach ($trending_category as $trencate)
                         <div class="item">
                             <a href="{{ url('view-category/'.$trencate->slug)}}">
-                                <div class="card">
-                                    <img src="{{ asset('assets/uploads/category/'.$trencate->image)}}"  alt="Category image">
+                                <div class="card-index-home">
+                                    <center><img src="{{ asset('assets/uploads/category/'.$trencate->image)}}"  alt="Category image"></center>
                                     <div>
                                         <h5>{{$trencate->name}}</h5>
                                         <p>

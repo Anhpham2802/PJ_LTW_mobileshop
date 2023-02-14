@@ -53,7 +53,7 @@ class ReviewController extends Controller
             $prod_slug = $product->slug;
             if($new_review)
             {
-                return redirect('view-category/'.$category_slug.'/'.$prod_slug)->with('status', "Thank you for writing a review");
+                return response()->json(['redirect' => '/view-category/'.$review->product->category->slug.'/'.$review->product->slug, 'status' => 'Thank you for writing a review']);
             }
         }
         else
@@ -95,7 +95,7 @@ class ReviewController extends Controller
             {
                 $review->user_review = $request->input('user_review');
                 $review->update();
-                return redirect('view-category/'.$review->product->category->slug.'/'.$review->product->slug)->with('status', "Review Updated Successfully");
+                return response()->json(['redirect' => '/view-category/'.$review->product->category->slug.'/'.$review->product->slug, 'status' => 'Review Updated Successfully']);
             }
             else
             {

@@ -107,16 +107,12 @@
                                     <div>
                                         <h4 class="rating-modal-title fs-5">Rate {{ $products->name }}</h4>
                                     </div>
-                                    <div>
-                                        <button type="button" style="font-size :20px" class="btn-close"
-                                            data-bs-dismiss="modal" aria-label="Close">&times;</button>
-                                    </div>
                                 </div>
                                 <div class="rating-modal-body">
                                     <div class="rating-css">
                                         <div class="star-icon">
                                             @if($user_rating)
-                                            @for($i =1; $i<= $user_rating->stars_rated; $i++)
+                                                @for($i =1; $i<= $user_rating->stars_rated; $i++)
                                                 <input type="radio" value="{{$i}}" name="product_rating" checked
                                                     id="rating{{$i}}">
                                                 <label for="rating{{$i}}" class="fa fa-star"></label>
@@ -124,8 +120,8 @@
                                                 @for($j = $user_rating->stars_rated+1; $j<= 5; $j++) <input type="radio"
                                                     value="{{$j}}" name="product_rating" id="rating{{$j}}">
                                                     <label for="rating{{$j}}" class="fa fa-star"></label>
-                                                    @endfor
-                                                    @else
+                                                @endfor
+                                            @else
                                                     <input type="radio" value="1" name="product_rating" checked
                                                         id="rating1">
                                                     <label for="rating1"><i class="fa-solid fa-star"
@@ -142,7 +138,7 @@
                                                     <input type="radio" value="5" name="product_rating" id="rating5">
                                                     <label for="rating5"><i class="fa-solid fa-star"
                                                             style="font-size :35px"></i></label>
-                                                    @endif
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
@@ -168,7 +164,7 @@
             <div class="review margin-bottom">
                 <div>
                     @foreach ($reviews as $item)
-                    <div class="user-review">
+                    <div style="border: #6298ce 1px solid;padding: 7px;margin: 5px;">
                         <label for="">{{ $item->user->name .' '.$item->user->lname }}</label>
                         @if($item->user_id == Auth::id())
                         <a href="{{ url('edit-review/'.$products->slug.'/userreview') }}">edit</a>
@@ -193,8 +189,8 @@
                     @endforeach
                 </div>
                 <div class="review-private">
-                    <div class="rade-this-product">
-                        <button class="rade-this-product btn btn-primary" type="button" data-bs-toggle="modal"
+                    <div class="rate-this-product">
+                        <button class="rate-this-product btn btn-primary" type="button" data-bs-toggle="modal"
                             data-bs-target="#exampleModal">
                             Rate this product
                         </button>

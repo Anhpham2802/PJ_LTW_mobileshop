@@ -71,16 +71,16 @@ class FrontendController extends Controller
 
     }
 
-    public function productlistAjax(){
-        $products = Product::select('name')->where('status', '0')->get();
-        $data = [];
+   public function productlistAjax(){
+       $products = Product::select('name')->where('status', '0')->get();
+       $data = [];
 
-        foreach ($products as $item){
-            $data[] = $item['name'];
-        }
+       foreach ($products as $item){
+           $data[] = $item['name'];
+       }
 
-        return $data;
-    }
+       return $data;
+   }
 
     public function searchProduct(Request $request){
         $search_product = $request->product_name;
@@ -88,7 +88,7 @@ class FrontendController extends Controller
         if($search_product != ""){
             $product = Product::where("name", "LIKE", "%$search_product%")->first();
             if($product){
-                return redirect('view-category/'.$product->category->slug.'/'.$product->slug);
+                return redirect('view-category/'.$product->category->slug);
             }
             else{
                 return redirect()->back()->with("status", "No product matched your search :)))");

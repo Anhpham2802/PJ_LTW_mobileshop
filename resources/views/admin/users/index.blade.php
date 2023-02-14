@@ -5,13 +5,13 @@
 @endsection
 
 @section('content')
-    <div class="card">
+    <div class="navbar">
         <div class="card-header">
             <h4>Register Users</h4>
             <hr>
         </div>
         <div class="card-body">
-            <table class="table table-bordered table-striped">
+            <table class="table table-bordered">
                 <thead>
                     <tr>
                         <th>Id</th>
@@ -20,7 +20,7 @@
                         <th>Phone</th>
                         <th>Role</th>
                         <th>Action</th>
-                        
+
                     </tr>
                 </thead>
                 <tbody>
@@ -32,7 +32,7 @@
                             <td>{{ $item -> phone }}</td>
                             <td>{{ $item -> role_as == '0'? 'Users':'Admin' }}</td>
                             <td>
-                                <a href="{{ url('view-user/'.$item->id) }}" class="btn btn-primary btn-sm">View</a>
+                                <a href="{{ url('view-user/'.$item->id) }}" class="cate-btn btn-primary">View</a>
                             </td>
                         </tr>
                     @endforeach

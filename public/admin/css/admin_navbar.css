@@ -3,7 +3,7 @@
     top: 0;
     right: 0;
     left: 250px;
-    background-color: #e0e4a5;
+    background-color: #EDDBC7;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -80,14 +80,14 @@ a.navbar-brand:hover {
     align-items: center;
 }
 
-.form-control {
+.search-form-control {
     width: 20rem;
     padding: 0.7rem;
     border: none;
     border-radius: 0.25rem;
     outline: none;
     position: relative;
-
+    border: 1px solid #bf4343;
 }
 
 .btn-round {
@@ -138,7 +138,7 @@ li.nav-item.person-dropdown {
 
 .person-dropdown .dropdown-menu{
     display: none;
-    background-color: #60c0d0;
+    background-color: #F8EAD8;
     position: absolute;
 }
 
@@ -151,5 +151,5 @@ a.dropdown-item {
 }
 
 a.dropdown-item:hover {
-    background-color: #92e2ec;
+    background-color: #F9F5E7;
 }

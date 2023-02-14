@@ -23,8 +23,8 @@
         <div class="container">
             <div>
                 <div>
-                    <h2 style="margin-left:40px;font-size:35px">{{$category->name}}</h2>
-                    <div class="products" style="margin-top: 20px;margin-left:10px">
+                    <h2 style="font-size:35px">{{$category->name}}</h2>
+                    <div class="products2" style="margin-top: 20px">
                         @foreach ($products as $prod)
                             <div class="item">
                                 <a href="{{ url('view-category/'.$category->slug.'/'.$prod->slug) }}">
@@ -43,4 +43,3 @@
         </div>
     </div>
 @endsection
-Viết cho LT WEB 🌝

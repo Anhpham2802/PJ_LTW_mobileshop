@@ -1,0 +1,36 @@
+
+.wrapper-review {
+    margin: 0 auto;
+    width: 700px;
+}
+.margin-top{
+    margin-top: 20px;
+}
+.product-review-top{
+    display: flex;
+}
+.pr-img{
+    margin-right: 20px;
+}
+.form-text{
+    background-color: rgb(250, 250, 250);
+    padding: 15px;
+}
+.form-review{
+    width: 490px;
+    height: 180px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.form-body{
+    position: relative;
+    height: 230px;
+}
+.btn-submit{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    padding: 5px;
+    background-color: #007bff;
+    border-radius: 3px;
+}

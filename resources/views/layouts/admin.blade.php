@@ -24,8 +24,15 @@
     <link href="{{ asset('admin/css/index_category.css') }}" rel="stylesheet">
     <link href="{{ asset('admin/css/category_edit.css') }}" rel="stylesheet">
     <link href="{{ asset('admin/css/add_category.css') }}" rel="stylesheet">
-    <link href="{{ asset('admin/css/add_product.css') }}" rel="stylesheet">
+    <link href="{{ asset('admin/css/add-product.css') }}" rel="stylesheet">
     <link href="{{ asset('admin/css/edit-product.css') }}" rel="stylesheet">
+    <link href="{{ asset('admin/css/admin_responsive.css') }}" rel="stylesheet">
+    <link href="{{ asset('admin/css/admin-view-order.css') }}" rel="stylesheet">
+    <link href="{{ asset('admin/css/admin_view_user.css') }}" rel="stylesheet">
+
+    {{--    icon navbar --}}
+    <script src="https://kit.fontawesome.com/7d7d49f14e.js" crossorigin="anonymous"></script>
+
 
 
 </head>
@@ -41,13 +48,6 @@
         @include('layouts.inc.adminfooter')
     </div>
 </div>
-
-
-!--   Core JS Files   -->
-<script src="{{ asset('admin/js/jquery.min.js') }}" defer></script>
-<script src="{{ asset('admin/js/popper.min.js') }}" defer></script>
-<script src="{{ asset('admin/js/bootstrap-material-design.min.js') }}" defer></script>
-<script src="{{ asset('admin/js/perfect-scrollbar.jquery.min.js') }}" defer></script>
 
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 @if(session('status'))

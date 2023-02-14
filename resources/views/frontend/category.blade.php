@@ -26,7 +26,7 @@
                         @foreach ($category as $cate)
                             <div class="item">
                                 <a href="{{ url('view-category/'.$cate->slug)}}">
-                                    <div class="card">
+                                    <div class="card-index-home">
                                         <img src="{{ asset('assets/uploads/category/'.$cate->image)}}"  alt="Category image">
                                         <div>
                                             <h5>{{$cate->name}}</h5>

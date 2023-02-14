@@ -17,6 +17,8 @@ use App\Http\Controllers\Frontend\RatingController;
 use App\Http\Controllers\Frontend\ReviewController;
 use App\Http\Controllers\Frontend\UserController;
 use App\Http\Controllers\Frontend\WishlistController;
+use Spatie\Analytics\Period;
+use Spatie\Analytics\AnalyticsFacade as Analytics; //Change here
 
 /*
 |--------------------------------------------------------------------------
@@ -73,16 +75,12 @@ Route::middleware(['auth'])->group(function(){
 
     //Route review
     Route::get('add-review/{product_slug}/userreview', [ReviewController::class, 'add']);
-    Route::post('add-review', [ReviewController::class, 'create']);
+    Route::post('add-review', [ReviewController::class, 'create'])->middleware('filter_bad_words');
     Route::get('edit-review/{product_slug}/userreview', [ReviewController::class, 'edit']);
-    Route::put('update-review', [ReviewController::class, 'update']);
+    Route::post('update-review', [ReviewController::class, 'update'])->middleware('filter_bad_words');
 
     //Route wishlist
     Route::get('wishlist',[WishlistController::class, 'index']);
-
-    //Route payment
-    Route::post('vnpay_payment', [CheckoutController::class, 'vnpay']);
-    Route::post('momo_payment', [CheckoutController::class, 'momo']);
 });
 
 
@@ -114,5 +112,10 @@ Route::middleware(['auth','isAdmin'])->group(function () {
     //Users
     Route::get('users', [DashboardController::class, 'users']);
     Route::get('view-user/{id}', [DashboardController::class, 'viewuser']);
-
 });
+
+Route::get('/analytics', function () {
+
+    $analyticsData = Analytics::fetchVisitorsAndPageViews(Period::days(7));
+    return view('welcome', ['analyticsData' => $analyticsData]);
+}); 
